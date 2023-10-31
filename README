@@ -1,0 +1,2 @@
+1. Open folder inside dev container
+2. Build minimal C++ example: `bazel build //...`
