@@ -1,4 +1,3 @@
-# Copyright 2023 Figure AI, Inc
 load("@rules_cc//cc:defs.bzl", "cc_binary")
 
 package(default_visibility = ["//visibility:public"])

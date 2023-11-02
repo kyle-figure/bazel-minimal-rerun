@@ -1,4 +1,3 @@
-// Copyright 2023 Figure AI, Inc
 #include <rerun.hpp>
 
 int main() {
