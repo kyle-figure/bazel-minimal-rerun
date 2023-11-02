@@ -1,12 +1,12 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 15a087297..9eb30ca85 100644
+index b1d408ae5..e2784b950 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -222,3 +222,7 @@ target_link_libraries(rerun_sdk PRIVATE RerunArrowTarget)
+@@ -264,3 +264,7 @@ target_link_libraries(rerun_sdk PRIVATE RerunArrowTarget)
  if(DEFINED RERUN_REPOSITORY)
      add_subdirectory(tests)
  endif()
 +
 +install(TARGETS rerun_sdk)
-+install(FILES ${ARROW_LIBRARY_FILE} TYPE LIB)
++install(FILES ${ARROW_LIBRARY_FILE} ${ARROW_BUNDLED_DEPENDENCIES_FILE} TYPE LIB)
 +install(DIRECTORY src/ DESTINATION include FILES_MATCHING PATTERN "*.h*")

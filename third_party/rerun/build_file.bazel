@@ -24,7 +24,8 @@ cmake(
     lib_source = ":all_srcs",
     out_static_libs = [
         "librerun_sdk.a",
-        "libarrow.a"
+        "libarrow.a",
+        "libarrow_bundled_dependencies.a"
     ],
     tags = ["manual"],
     deps = [":rerun_core"],
