@@ -9,15 +9,10 @@ filegroup(
     srcs = glob(["**"]),
 )
 
-# cc_library(
-#     name = "rerun",
-#     deps = [":rerun_core", ":rerun_cpp", "@arrow"],
-# )
-
-# cc_library(
-#     name = "rerun_core",
-#     srcs = ["lib/librerun_c__linux_x64.a"],
-# )
+cc_import(
+    name = "rerun_core",
+    static_library = "@rerun//:lib/librerun_c__linux_x64.a",
+)
 
 cmake(
     name = "rerun",
@@ -26,11 +21,13 @@ cmake(
     ],
     cache_entries = {
         "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+        "RERUN_ARROW_LINK_SHARED": "OFF",
     },
     lib_source = ":all_srcs",
     out_static_libs = [
         "librerun_sdk.a",
-        # "librerun_c__linux_x64.a",
-        # "libarrow.a",
+        "libarrow.a"
     ],
+    tags = ["manual"],
+    deps = [":rerun_core"],
 )

@@ -26,5 +26,5 @@ http_archive(
     patches = ["@//:third_party/rerun/patches/cmake.patch"],
     sha256 = "7ae265730b878103ca2ef27e5084ee976dd92de2c22d860f15a9b423e1d5a7e0",
     strip_prefix = "rerun_cpp_sdk",
-    url = "https://github.com/rerun-io/rerun/releases/download/0.10.0/rerun_cpp_sdk.zip",  # 0.10.0
+    url = "https://github.com/rerun-io/rerun/releases/download/0.10.0/rerun_cpp_sdk.zip",
 )

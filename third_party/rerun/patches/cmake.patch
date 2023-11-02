@@ -1,20 +1,12 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 15a087297..69593ca40 100644
+index 15a087297..9eb30ca85 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -105,7 +105,7 @@ elseif(WIN32)
-     target_link_libraries(rerun_c INTERFACE ws2_32.dll Bcrypt.dll Userenv.dll ntdll.dll)
- endif()
- 
--target_link_libraries(rerun_sdk PRIVATE rerun_c)
-+target_link_libraries(rerun_sdk PUBLIC rerun_c)
- 
- # -----------------------------------------------------------------------------
- # Arrow:
-@@ -222,3 +222,6 @@ target_link_libraries(rerun_sdk PRIVATE RerunArrowTarget)
+@@ -222,3 +222,7 @@ target_link_libraries(rerun_sdk PRIVATE RerunArrowTarget)
  if(DEFINED RERUN_REPOSITORY)
      add_subdirectory(tests)
  endif()
 +
 +install(TARGETS rerun_sdk)
-+install(DIRECTORY src DESTINATION include FILES_MATCHING PATTERN "*.h*")
++install(FILES ${ARROW_LIBRARY_FILE} TYPE LIB)
++install(DIRECTORY src/ DESTINATION include FILES_MATCHING PATTERN "*.h*")
