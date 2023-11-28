@@ -22,9 +22,7 @@ rules_foreign_cc_dependencies()
 http_archive(
     name = "rerun",
     build_file = "@//:third_party/rerun/build_file.bazel",
-    patch_args = ["-p1"],
-    patches = ["@//:third_party/rerun/patches/cmake.patch"],
-    sha256 = "3193894a15d2675e0fd8d58a07207776cef0f5214b8495818a42ea04e50616cd",
+    sha256 = "74515259f89f089980cd3ef3045fac93a3ca5172a3200581569e64cc09305a58",
     strip_prefix = "rerun_cpp_sdk",
-    url = "https://github.com/rerun-io/rerun/releases/download/0.10.1/rerun_cpp_sdk.zip",
+    url = "https://github.com/rerun-io/rerun/releases/download/0.11.0/rerun_cpp_sdk.zip",
 )
