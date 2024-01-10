@@ -22,7 +22,7 @@ rules_foreign_cc_dependencies()
 http_archive(
     name = "rerun",
     build_file = "@//:third_party/rerun/build_file.bazel",
-    sha256 = "74515259f89f089980cd3ef3045fac93a3ca5172a3200581569e64cc09305a58",
+    sha256 = "e6a61ea37500f97b5d7f775db145fae4bf33e5d0f3d73c1dde69fa3e0fe2503a",
     strip_prefix = "rerun_cpp_sdk",
-    url = "https://github.com/rerun-io/rerun/releases/download/0.11.0/rerun_cpp_sdk.zip",
+    url = "https://github.com/rerun-io/rerun/releases/download/0.12.0/rerun_cpp_sdk.zip",
 )
