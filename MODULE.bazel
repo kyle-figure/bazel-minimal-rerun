@@ -3,14 +3,14 @@ module(
     repo_name = "com_github_bazel_minimal_rerun",
 )
 
-bazel_dep(name = "rules_cc", version = "0.0.9")
-bazel_dep(name = "rules_foreign_cc", version = "0.9.0")
+bazel_dep(name = "rules_cc", version = "0.1.2")
+bazel_dep(name = "rules_foreign_cc", version = "0.15.0")
 
 http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 http_archive(
     name = "rerun",
     build_file = "@//:third_party/rerun/build_file.bazel",
-    sha256 = "5f38113a647c72255b902fc3e00ca090c8011821550c94554c8c3845d2eac2a3",
+    sha256 = "9e0753392ba36ad3b386bb209aec6334f621eee0c13654fa81794f66ad4a4aa5",
     strip_prefix = "rerun_cpp_sdk",
-    url = "https://github.com/rerun-io/rerun/releases/download/0.13.0/rerun_cpp_sdk.zip",
+    url = "https://github.com/rerun-io/rerun/releases/download/0.19.1/rerun_cpp_sdk.zip",
 )

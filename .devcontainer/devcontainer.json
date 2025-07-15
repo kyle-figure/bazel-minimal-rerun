@@ -1,8 +1,8 @@
 {
 	"name": "Ubuntu",
-	"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"image": "mcr.microsoft.com/devcontainers/base:noble",
 	"features": {
-		"ghcr.io/balazs23/devcontainers-features/bazel:1": {}
+		"ghcr.io/devcontainers-community/features/bazel:1": {}
 	},
 	"remoteUser": "vscode",
 	"customizations": {
